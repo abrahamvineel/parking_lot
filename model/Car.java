@@ -2,6 +2,6 @@ package model;
 
 public class Car extends Vehicle{
     public Car(String registrationNumber, VehicleType vehicleType) {
-        super(registrationNumber, VehicleType.CAR);
+        super(registrationNumber, vehicleType);
     }
 }
