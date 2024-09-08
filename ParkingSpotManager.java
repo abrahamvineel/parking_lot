@@ -10,6 +10,8 @@ public class ParkingSpotManager {
         //implement parking strategy
         //factory pattern to return parking strategies
 
+        //reimplement the parking logic
+
         ParkingLot lot = new ParkingLot(2);
         lot.addLevel(new Level(1,80));
         lot.addLevel(new Level(2,100));
