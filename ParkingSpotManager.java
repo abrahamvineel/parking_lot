@@ -13,8 +13,8 @@ public class ParkingSpotManager {
         //reimplement the parking logic
 
         ParkingLot lot = new ParkingLot(2);
-        lot.addLevel(new Level(1,80));
-        lot.addLevel(new Level(2,100));
+        lot.addLevel(new Level(1,80, new LinearParkingStrategy()));
+        lot.addLevel(new Level(2,100, new LinearParkingStrategy()));
 
         Vehicle car = new Car("ABCD", VehicleType.CAR);
         Vehicle bus = new Bus("ABCD", VehicleType.BUS);

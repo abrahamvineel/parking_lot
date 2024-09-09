@@ -7,17 +7,22 @@ public class Level {
 
     private List<ParkingSpot> parkingSpots;
     private int levelId;
-    public Level(int levelId, int numOfParkingSpots) {
+    private ParkingStrategy parkingStrategy;
+    public Level(int levelId, int numOfParkingSpots, ParkingStrategy parkingStrategy) {
         this.levelId = levelId;
-        this.parkingSpots = new ArrayList<>(numOfParkingSpots);
+        this.parkingSpots = new ArrayList<>();
+        this.parkingStrategy = parkingStrategy;
+        for(int i = 0; i <= numOfParkingSpots; i++) {
+            parkingSpots.add(new ParkingSpot(i, null));
+        }
     }
 
     public boolean parkVehicle(Vehicle vehicle) {
-        for (ParkingSpot spot : parkingSpots) {
+        int parkingSpotNumber = this.parkingStrategy.getSpotNumber(parkingSpots);
+        ParkingSpot spot = parkingSpots.get(parkingSpotNumber);
             if(spot.isSpotAvailable()) {
                 spot.parkVehicle(vehicle);
                 return true;
-            }
         }
         return false;
     }
