@@ -4,14 +4,6 @@ public class ParkingSpotManager {
 
     public static void main(String[] args) {
 
-        //create levels
-        //create parkingspots in each level
-        //park vehicle and unpark vehicle
-        //implement parking strategy
-        //factory pattern to return parking strategies
-
-        //reimplement the parking logic
-
         ParkingLot lot = new ParkingLot(2);
         PatternFactory factory = new PatternFactory();
         ParkingStrategy strategy = factory.getStrategy("OddOrEven");
