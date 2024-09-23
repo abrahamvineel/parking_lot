@@ -6,7 +6,7 @@ public class ParkingSpotManager {
 
         ParkingLot lot = new ParkingLot(2);
         PatternFactory factory = new PatternFactory();
-        ParkingStrategy strategy = factory.getStrategy("OddOrEven");
+        ParkingStrategy strategy = factory.getStrategy("Linear");
         lot.addLevel(new Level(1,80, strategy));
         lot.addLevel(new Level(2,100, strategy));
 
