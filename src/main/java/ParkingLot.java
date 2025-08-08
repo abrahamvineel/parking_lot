@@ -5,7 +5,7 @@ public class ParkingLot {
     private ParkingLot() {}
     public static ParkingLot getInstance() {
         if (instance == null) {
-            return new ParkingLot();
+            instance = new ParkingLot();
         }
         return instance;
     }
