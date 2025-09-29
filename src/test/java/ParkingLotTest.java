@@ -21,7 +21,6 @@ public class ParkingLotTest {
         ParkingLot parkingLot1 = ParkingLot.getInstance();
         Constructor<ParkingLot> constructor = ParkingLot.class.getDeclaredConstructor();
         constructor.setAccessible(true);
-
         ParkingLot parkingLot2 = constructor.newInstance();
 
         assertSame(parkingLot1, parkingLot2);
